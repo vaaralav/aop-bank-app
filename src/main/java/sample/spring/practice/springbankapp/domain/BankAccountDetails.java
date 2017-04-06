@@ -6,6 +6,7 @@ public class BankAccountDetails {
 	private int accountId;
 	private int balanceAmount;
 	private Date lastTransactionTimestamp;
+	private final String studentID = System.getenv("AOP_ID");
 
 	public int getAccountId() {
 		return accountId;
@@ -33,7 +34,7 @@ public class BankAccountDetails {
 
 	@Override
 	public String toString() {
-		return "BankAccountDetails [accountId=" + accountId
+		return "*" + studentID + "* " + "BankAccountDetails [accountId=" + accountId
 				+ ", balanceAmount=" + balanceAmount
 				+ ", lastTransactionTimestamp=" + lastTransactionTimestamp
 				+ "]";
